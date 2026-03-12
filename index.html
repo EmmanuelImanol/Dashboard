@@ -7,66 +7,133 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Document</title>
 </head>
-<body>
+<body class="bg-gray-100">
   
-  <div class="bg-slate-200 max-width-7xl w-[98%] mx-auto my-2 flex">
-    <aside class="bg-blue-600 w-54 md:w-64 text-white p-2 rounded-xl flex flex-col justify-between">
-      <div class="bg-blue-900 rounded-lg">
-        <h1>Intranet</h1>
-      </div>
-      <nav class="flex flex-col rounded-lg">
-        <a href="/">Dashboard</a>
-        <a href="#">Usuarios</a>
-        <a href="#">Documentos</a>
-        <a href="#">Noticias</a>
-      </nav>
-      <div class="rounded-lg">
-        <p>Admin</p>
-      </div>
-    </aside>
-    <!-- Contenido principal -->
-    <main class="p-2 h-full grid gap-4 w-full">
-      <!-- Tarjetas de navegación -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="bg-blue-200 p-2 rounded-xl">
-          <p>Usuarios</p>
-        </div>
-        <div class="bg-blue-200 p-2 rounded-xl">
-          <p>Noticias</p>
-        </div>
-        <div class="bg-blue-200 p-2 rounded-xl">
-          <p>Documentos</p>
-        </div>
-      </div>
-      <!-- Tarjetas de actividad -->
-       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-        <div class="bg-blue-200 p-2 rounded-xl w-full">
-          <div class="flex justify-between px-2">
-            <p>Noticias recientes</p>
-            <button 
-              type="button"
-              class="cursor-pointer hover:text-blue-600 transition"
-            >Ver todas</button>
+  <div class="h-screen w-screen p-1 sm:p-2 md:p-3 lg:p-4 flex items-center justify-center overflow-hidden">
+    <div class="flex p-2 w-full h-full overflow-hidden">
+      <aside class="bg-slate-400 w-54 md:w-64 text-white px-2 py-3 rounded-xl flex flex-col justify-between h-full my-auto">
+        <div>
+          <div class="bg-blue-900 rounded-lg h-24 flex justify-center items-center mb-3">
+            <h1 class="text-xl uppercase">Intranet</h1>
           </div>
+          <nav class="flex flex-col rounded-lg gap-3">
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition">
+              <i class="fa-solid fa-chart-column"></i>
+              <a href="/">Dashboard</a>
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition">
+              <i class="fa-solid fa-users"></i>
+              <a href="#">Usuarios</a>
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition">
+              <i class="fa-solid fa-folder"></i>
+              <a href="#">Documentos</a>
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition">
+              <i class="fa-solid fa-newspaper"></i>
+              <a href="#">Noticias</a>
+            </div>
+          </nav>
         </div>
-        <!-- Contenedor de documentos recientes -->
-        <div class="bg-blue-200 p-2 rounded-xl">
-          <div class="flex justify-between px-2 mb-2">
-            <p>Documentos recientes</p>
-            <button 
-              type="button"
-              class="cursor-pointer hover:text-blue-600 transition"
-            >Ver todas</button>
+        <div class="rounded-lg bg-blue-900">
+          <p>Admin</p>
+        </div>
+      </aside>
+      <!-- Contenido principal -->
+      <main class="p-2 h-screen grid gap-3 w-full overflow-y-scroll">
+        <!-- Tarjeta de bienvenida -->
+         <div class="bg-white p-4 rounded-lg h-64">
+          <h2 class="text-4xl font-bold mb-2">Hola, Emmanuel Imanol</h2>
+          <p>Administra tus archivos y mira quien puede ver</p>
+         </div>
+        <!-- Tarjetas de navegación -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <div class="bg-blue-100 p-4 rounded-xl flex items-center">
+            <div class="flex items-center flex-1">
+              <div class="bg-red-400 text-red-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <p class="ml-2">Usuarios</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
+            </div>
           </div>
-          <div class="px-2">
-            <div class="flex items-center gap-2 bg-gray-50 rounded p-1">
-              <i class="fa-solid fa-file-pdf"></i>
-              <p>Nombre del archivo</p>
+          <div class="bg-blue-200 p-4 rounded-xl flex items-center">
+            <div class="flex items-center flex-1">
+              <div class="bg-blue-400 text-blue-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-newspaper"></i>
+              </div>
+              <p class="ml-2">Noticias</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
+            </div>
+          </div>
+          <div class="bg-blue-200 p-4 rounded-xl flex items-center">
+            <div class="flex items-center flex-1">
+              <div class="bg-orange-400 text-orange-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-folder"></i>
+              </div>
+              <p class="ml-2">Documentos</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
             </div>
           </div>
         </div>
-       </div>
-    </main>
+        <!-- Tarjetas de actividad -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
+          <div class="bg-blue-200 p-2 rounded-xl w-full">
+            <div class="flex justify-between px-2 mb-2">
+              <p>Noticias recientes</p>
+              <button 
+                type="button"
+                class="cursor-pointer hover:text-blue-600 transition"
+              >Ver todas</button>
+            </div>
+            <div class="p-2 space-y-3">
+              <div class="bg-gray-50 rounded p-2">
+                <p>Nombre de la noticia</p>
+                <div class="pl-3 text-sm">
+                  <p>Conteido de la noticia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ea ducimus odit dolore earum a saepe deserunt natus. Quae, delectus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error.</p>
+                </div>
+              </div>
+              <div class="bg-gray-50 rounded p-2">
+                <p>Nombre de la noticia</p>
+                <div class="pl-3 text-sm">
+                  <p>Conteido de la noticia: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ea ducimus odit dolore earum a saepe deserunt natus. Quae, delectus?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contenedor de documentos recientes -->
+          <div class="bg-blue-200 p-2 rounded-xl">
+            <div class="flex justify-between px-2 mb-2">
+              <p>Documentos recientes</p>
+              <button 
+                type="button"
+                class="cursor-pointer hover:text-blue-600 transition"
+              >Ver todas</button>
+            </div>
+            <div class="px-2 space-y-3">
+              <!-- Archivo -->
+              <div class="flex items-center gap-2 bg-gray-50 rounded p-1">
+                <i class="fa-solid fa-file-pdf"></i>
+                <p>Nombre del archivo</p>
+              </div>
+              <!-- Archivo -->
+              <div class="flex items-center gap-2 bg-gray-50 rounded p-1">
+                <i class="fa-solid fa-file-pdf"></i>
+                <p>Nombre del archivo</p>
+              </div>
+            </div>
+          </div>
+         </div>
+      </main>
+    </div>
   </div>
 
 </body>
