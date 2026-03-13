@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Intranet</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="h-screen w-screen p-1 sm:p-2 md:p-3 lg:p-4 flex items-center justify-center overflow-hidden">
+    <div class="bg-white rounded-2xl shadow-xl w-full h-full overflow-hidden flex">
+      <div class="flex justify-center items-center flex-1 bg-gray-100">
+        <div class="p-4 w-full sm:w-[60%]">
+          <div class="mb-4">
+            <h1 class="text-4xl font-bold">Inica sesión</h1>
+          </div>
+          <form>
+            <div class="flex flex-col gap-4">
+              <div>
+                <label class="block text-sm font-medium text-[#78716C] mb-1.5 uppercase tracking-wide">
+                  Correo corporativo
+                </label>
+                <div class="relative">
+                  <i class="fa-solid fa-envelope absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                  <input
+                    type="email"
+                    placeholder="nombre@empresa.com"
+                    class="w-full border border-transparent py-2 pl-10 pr-4 rounded-lg bg-inp placeholder-muted outline-none focus:border-brand focus:bg-white transition-all duration-200 bg-gray-200"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-[#78716C] mb-1.5 uppercase tracking-wide">
+                  Contraseña
+                </label>
+                <div class="relative">
+                  <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                  <input
+                    id="pwInput"
+                    type="password"
+                    placeholder="••••••••"
+                    class="w-full border border-transparent py-2 pl-10 pr-4 rounded-lg bg-inp placeholder-muted outline-none focus:border-brand focus:bg-white transition-all duration-200 bg-gray-200"
+                  />
+                  <button
+                    type="button"
+                    onclick="togglePw()"
+                    class="absolute right-3.5 top-1/2 -translate-y-1/2 text-muted hover:text-brand transition-colors"
+                  >
+                    <i id="eyeIcon" class="fa-regular fa-eye text-sm"></i>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <button 
+                  type="button"
+                  class="bg-linear-to-bl from-violet-500 to-fuchsia-500 text-white hover:cursor-pointer w-full rounded-lg py-2"
+                >
+                  Iniciar Sesión
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="bg-linear-to-bl from-violet-500 to-fuchsia-500 text-white md:flex items-center flex-1 hidden">
+        <div class="p-4">
+          <h2 class="text-4xl lg:text-5xl font-black mb-5">Tú espacio de trabajo digital</h2>
+          <p class="text-xl">Accede a recursos, herramientas y colaboraciones de tu organización desde un solo lugar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/scripts.js"></script>
+</body>
+</html>

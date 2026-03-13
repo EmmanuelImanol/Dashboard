@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+<body class="bg-gray-100">
+  
+  <div class="h-screen w-screen p-1 sm:p-2 md:p-3 lg:p-4 flex items-center justify-center overflow-hidden">
+    <div class="flex p-2 w-full h-full overflow-hidden">
+      <aside class="bg-gray-300 w-54 md:w-auto text-white px-2 py-4 rounded-xl flex flex-col justify-between h-full my-auto hidden lg:block">
+        <div class="flex flex-col gap-10">
+          <div class="bg-linear-to-bl from-violet-500 to-fuchsia-500 rounded p-2">
+            <i class="fa-solid fa-infinity"></i>
+          </div>
+          <nav class="flex flex-col rounded-lg gap-3">
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition relative group">
+              <i class="fa-solid fa-house-chimney"></i>
+              <span class="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-500 text-sm rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Dashboard
+              </span>
+              <!-- <a href="/">Dashboard</a> -->
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition relative group">
+              <i class="fa-solid fa-users"></i>
+              <span class="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-500 text-sm rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Usuarios
+              </span>
+              <!-- <a href="#">Usuarios</a> -->
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition relative group">
+              <i class="fa-solid fa-folder"></i>
+              <span class="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-500 text-sm rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Documentos
+              </span>
+              <!-- <a href="#">Documentos</a> -->
+            </div>
+            <div class="bg-slate-700 rounded-lg p-2 hover:bg-slate-700/95 cursor-pointer transition relative group">
+              <i class="fa-solid fa-newspaper"></i>
+              <span class="absolute left-full ml-2 top-1/2 -translate-y-1/2 bg-gray-500 text-sm rounded px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                Noticias
+              </span>
+              <!-- <a href="#">Noticias</a> -->
+            </div>
+          </nav>
+        </div>
+      </aside>
+      <!-- Contenido principal -->
+      <main class="px-2 lg:pl-4 pb-4 lg:pb-0 h-screen flex flex-col gap-4 w-full overflow-y-auto">
+        <!-- Header -->
+        <div class="bg-white shadow-lg px-4 py-2 rounded-lg sticky top-0 z-10">
+          <div class="hidden lg:flex lg:justify-between lg:items-center">
+            <form>
+              <input 
+                type="text" 
+                name="buscador" 
+                placeholder="Buscar..."
+                class="bg-white p-2 rounded-lg"
+              >
+            </form>
+            <div class="flex items-center">
+              <i class="fa-solid fa-calendar"></i>
+              <p>12 Marzo 2026</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="bg-blue-400 rounded-full h-9 w-9 flex items-center justify-center font-bold text-xl text-white">
+                EI
+              </div>
+              <p>Emmanuel Imanol</p>
+            </div>
+          </div>
+          <!-- Navegación Responsive -->
+          <div class="lg:hidden flex items-center justify-between">
+            <div class="bg-linear-to-bl from-blue-500 to-sky-500 rounded p-2 text-white">
+              <i class="fa-solid fa-infinity"></i>
+            </div>
+            <div class="text-2xl">
+              <button 
+                type="button"
+                class="cursor-pointer"
+              >
+                <i class="fa-solid fa-bars-staggered"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2 gap-4">
+          <!-- Tarjeta de bienvenida -->
+           <div class="bg-white p-4 rounded-lg shadow-lg lg:h-64">
+            <h2 class="text-4xl font-bold mb-2">Hola, Emmanuel Imanol.</h2>
+            <h3 class="text-3xl font-bold">Bienvenido</h3>
+            <p>Administra tus archivos y mira quien puede ver</p>
+           </div>
+           <!-- Notificaciones -->
+          <div class="lg:h-64 overflow-auto rounded-lg shadow-lg flex flex-col gap-4 bg-white p-4">
+            <p>Notificaciones</p>
+            <!-- Contenedor de notificaciones -->
+            <div class="flex flex-col gap-2 overflow-y-auto">
+              <div class="flex items-center cursor-pointer hover:bg-gray-100 transition p-2 rounded-lg">
+                <div class="bg-blue-400 px-3 py-3 rounded-lg text-white">
+                  <i class="fa-solid fa-newspaper"></i>
+                </div>
+                <p class="ml-3">Nueva noticia Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, aliquid.</p>
+              </div>
+              <div class="flex items-center cursor-pointer hover:bg-gray-100 transition p-2 rounded-lg">
+                <div class="bg-orange-400 px-3 py-3 rounded-lg text-white">
+                  <i class="fa-solid fa-folder"></i>
+                </div>
+                <p class="ml-3">Nueva documento Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, ipsa?</p>
+              </div>
+              <div class="flex items-center cursor-pointer hover:bg-gray-100 transition p-2 rounded-lg">
+                <div class="bg-blue-400 px-3 py-3 rounded-lg text-white">
+                  <i class="fa-solid fa-newspaper"></i>
+                </div>
+                <p class="ml-3">Nueva noticia Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, ipsa?</p>
+              </div>
+              <div class="flex items-center cursor-pointer hover:bg-gray-100 transition p-2 rounded-lg">
+                <div class="bg-orange-400 px-3 py-3 rounded-lg text-white">
+                  <i class="fa-solid fa-folder"></i>
+                </div>
+                <p class="ml-3">Nueva noticia Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, ipsa?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjetas de navegación -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pb-5">
+          <div class="bg-white p-4 rounded-xl flex items-center shadow-lg">
+            <div class="flex items-center flex-1">
+              <div class="bg-red-400 text-red-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <p class="ml-2">Usuarios</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-xl flex items-center shadow-lg">
+            <div class="flex items-center flex-1">
+              <div class="bg-blue-400 text-blue-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-newspaper"></i>
+              </div>
+              <p class="ml-2">Noticias</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-xl flex items-center shadow-lg">
+            <div class="flex items-center flex-1">
+              <div class="bg-orange-400 text-orange-100 px-2 py-1 w-max rounded">
+                <i class="fa-solid fa-folder"></i>
+              </div>
+              <p class="ml-2">Documentos</p>
+            </div>
+            <div class="flex justify-center">
+              <p class="font-black text-4xl text-slate-800">01</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
